@@ -19,7 +19,10 @@ class CreateStatisticsTable extends Migration
             $table->unsignedInteger('year_id')->index();
             $table->timestamps();
 
-
+            $table->foreign('year_id')
+                ->references('id')
+                ->on('years')
+                ->onDelete('cascade');
         });
     }
 
