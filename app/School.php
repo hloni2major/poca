@@ -14,4 +14,9 @@ class School extends Model
     protected $fillable = [
         'name'
     ];
+
+    public function Statistics()
+    {
+        return $this->hasMany(Statistics::class);
+    }
 }

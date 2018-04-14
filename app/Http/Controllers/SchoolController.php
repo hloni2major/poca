@@ -12,6 +12,6 @@ class SchoolController extends Controller
      */
     public function index()
     {
-        return School::latest();
+        return School::all();
     }
 }

@@ -21,7 +21,7 @@ class SchoolUnitTest extends TestCase
     /** @test */
     public function user_can_retrieve_all_schools()
     {
-        $response = $this->getJson('schools')->json();
+        $response = $this->call('GET', 'api/schools')->json();
         $this->assertCount(1, $response);
     }
 }
